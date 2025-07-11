@@ -289,22 +289,22 @@ For support and questions:
 ## 🛣️ Roadmap
 
 ### Phase 1 (Current)
-- ✅ Basic session creation and management
-- ✅ Real-time audio communication
-- ✅ AI-powered participants
-- ✅ Performance analytics
+-  Basic session creation and management
+-  Real-time audio communication
+-  AI-powered participants
+-  Performance analytics
 
 ### Phase 2 (Upcoming)
-- 🔄 Video communication support
-- 🔄 Advanced AI personality customization
-- ✅ Multi-language support
-- 🔄 Mobile app development
+-  Video communication support
+-  Advanced AI personality customization
+-  Multi-language support
+-  Mobile app development
 
 ### Phase 3 (Future)
-- 📅 Enterprise features
-- 📅 Integration with learning platforms
-- 📅 Advanced analytics dashboard
-- 📅 API for third-party integrations
+-  Enterprise features
+-  Integration with learning platforms
+-  Advanced analytics dashboard
+-  API for third-party integrations
 
 ---
 
