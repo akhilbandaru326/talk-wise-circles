@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { 
   ArrowLeft,
   Download,
@@ -19,8 +20,19 @@ import {
   BarChart3,
   Users,
   Target,
-  Lightbulb
+  Lightbulb,
+  User
 } from "lucide-react";
+
+interface Participant {
+  id: string;
+  name: string;
+  type: 'human' | 'ai';
+  avatar: string;
+  speakingTime: number;
+  wordsSpoken: number;
+  contributionScore: number;
+}
 
 interface AnalysisData {
   speakingTime: number;
@@ -33,6 +45,7 @@ interface AnalysisData {
   keyPoints: string[];
   improvements: string[];
   strengths: string[];
+  participants: Participant[];
 }
 
 const SessionReport = () => {
@@ -47,6 +60,44 @@ const SessionReport = () => {
     interactionScore: 85,
     clarityScore: 78,
     engagementLevel: 92,
+    participants: [
+      {
+        id: '1',
+        name: 'You',
+        type: 'human',
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=user',
+        speakingTime: 180,
+        wordsSpoken: 342,
+        contributionScore: 85
+      },
+      {
+        id: '2',
+        name: 'Sarah Chen',
+        type: 'human',
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=sarah',
+        speakingTime: 220,
+        wordsSpoken: 428,
+        contributionScore: 92
+      },
+      {
+        id: '3',
+        name: 'AI Facilitator',
+        type: 'ai',
+        avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=ai1',
+        speakingTime: 150,
+        wordsSpoken: 298,
+        contributionScore: 88
+      },
+      {
+        id: '4',
+        name: 'AI Analyst',
+        type: 'ai',
+        avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=ai2',
+        speakingTime: 120,
+        wordsSpoken: 245,
+        contributionScore: 82
+      }
+    ],
     keyPoints: [
       "Emphasized the importance of clear communication in leadership",
       "Discussed strategies for managing remote teams effectively",
@@ -146,6 +197,61 @@ const SessionReport = () => {
                 Excellent
               </Badge>
             </div>
+          </div>
+        </div>
+
+        {/* Participants Overview */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
+            <Users className="w-6 h-6 mr-2" />
+            Session Participants
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {analysisData.participants.map((participant) => (
+              <Card key={participant.id} className="bg-white/5 backdrop-blur-sm border-white/10">
+                <CardContent className="p-4 text-center">
+                  <div className="mb-3">
+                    <Avatar className="w-16 h-16 mx-auto mb-2">
+                      <AvatarImage src={participant.avatar} alt={participant.name} />
+                      <AvatarFallback className="bg-blue-600 text-white">
+                        {participant.type === 'ai' ? (
+                          <Brain className="w-8 h-8" />
+                        ) : (
+                          <User className="w-8 h-8" />
+                        )}
+                      </AvatarFallback>
+                    </Avatar>
+                    <h3 className="text-white font-medium">{participant.name}</h3>
+                    <Badge 
+                      variant="outline" 
+                      className={participant.type === 'ai' 
+                        ? "border-purple-400/30 text-purple-300" 
+                        : "border-blue-400/30 text-blue-300"
+                      }
+                    >
+                      {participant.type === 'ai' ? 'AI Bot' : 'Human'}
+                    </Badge>
+                  </div>
+                  
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Speaking Time:</span>
+                      <span className="text-white">
+                        {Math.floor(participant.speakingTime / 60)}:{(participant.speakingTime % 60).toString().padStart(2, '0')}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Words:</span>
+                      <span className="text-white">{participant.wordsSpoken}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Score:</span>
+                      <span className="text-white">{participant.contributionScore}/100</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
@@ -358,7 +464,7 @@ const SessionReport = () => {
               </Button>
             </div>
           </CardContent>
-        </Card>
+        </div>
       </div>
     </div>
   );
