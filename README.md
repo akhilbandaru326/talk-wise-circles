@@ -1,11 +1,11 @@
 
-# TalkWise - AI-Powered Group Discussion Platform
+TalkWise - AI-Powered Group Discussion Platform
 
 A full-stack web application that enables users to practice and improve their communication skills through AI-powered group discussions. Built with the MERN stack and integrated with OpenAI, Google Speech APIs, and WebRTC for real-time communication.
 
-## 🚀 Features
+Features
 
-### Core Functionality
+Core Functionality
 - **User Authentication**: JWT-based registration and login system
 - **Session Management**: Create, schedule, and join discussion sessions
 - **Real-time Audio**: WebRTC-powered voice communication
@@ -14,7 +14,7 @@ A full-stack web application that enables users to practice and improve their co
 - **Performance Analytics**: Detailed post-session reports and insights
 - **Multi-language Support**: Discussions in multiple languages
 
-### Advanced Features
+Advanced Features
 - **Smart Session Configuration**: Mix real users with AI participants
 - **Performance Tracking**: Speaking time, clarity, engagement metrics
 - **Improvement Suggestions**: AI-powered feedback and recommendations
@@ -22,9 +22,8 @@ A full-stack web application that enables users to practice and improve their co
 - **Real-time Indicators**: Visual feedback for speaking participants
 - **Session Sharing**: Shareable links for easy participant access
 
-## 🛠️ Technology Stack
-
-### Frontend
+Technology Stack
+Frontend
 - **React 18** with TypeScript
 - **Tailwind CSS** for styling
 - **Shadcn/UI** for components
@@ -32,35 +31,35 @@ A full-stack web application that enables users to practice and improve their co
 - **TanStack Query** for state management
 - **WebRTC** for real-time communication
 
-### Backend (Recommended Setup)
+Backend (Recommended Setup)
 - **Node.js** with Express.js
 - **MongoDB** with Mongoose ODM
 - **Socket.IO** for real-time features
 - **JWT** for authentication
 - **Multer** for file uploads
 
-### AI & External APIs
+ AI & External APIs
 - **OpenAI GPT-4** for AI participants
 - **Google Speech-to-Text** for transcription
 - **Google Text-to-Speech** for AI voice
 - **Google Translate** for multi-language support
 
-## 📋 Prerequisites
+📋 Prerequisites
 
 - Node.js (v18 or higher)
 - npm or yarn
 - MongoDB instance (local or Atlas)
 - API keys for external services
 
-## 🔧 Installation & Setup
+ Installation & Setup
 
-### 1. Clone the Repository
+ 1. Clone the Repository
 ```bash
 git clone <your-repository-url>
 cd talkwise-platform
 ```
 
-### 2. Install Dependencies
+ 2. Install Dependencies
 ```bash
 # Frontend dependencies (already configured in Lovable)
 npm install
@@ -70,7 +69,7 @@ cd backend
 npm install
 ```
 
-### 3. Environment Variables
+3. Environment Variables
 
 Create a `.env` file in your backend directory:
 
@@ -111,7 +110,7 @@ TURN_SERVER_CREDENTIAL=password
 FRONTEND_URL=http://localhost:8080
 ```
 
-### 4. Google Cloud Setup
+ 4. Google Cloud Setup
 
 1. Create a Google Cloud Project
 2. Enable the following APIs:
@@ -121,15 +120,15 @@ FRONTEND_URL=http://localhost:8080
 3. Create a service account and download credentials
 4. Set `GOOGLE_APPLICATION_CREDENTIALS` to the path of your credentials file
 
-### 5. OpenAI Setup
+ 5. OpenAI Setup
 
 1. Sign up for OpenAI API access
 2. Generate an API key from the OpenAI dashboard
 3. Add the key to your environment variables
 
-## 🚀 Running the Application
+Running the Application
 
-### Development Mode
+Development Mode
 
 1. **Start the Frontend** (Lovable handles this automatically):
 ```bash
@@ -146,14 +145,14 @@ The application will be available at:
 - Frontend: `http://localhost:8080`
 - Backend API: `http://localhost:5000`
 
-### Production Deployment
+ Production Deployment
 
-#### Frontend (Vercel/Netlify)
+ Frontend (Vercel/Netlify)
 ```bash
 npm run build
 ```
 
-#### Backend (Heroku/Railway/DigitalOcean)
+ Backend (Heroku/Railway/DigitalOcean)
 ```bash
 # Build the application
 npm run build
@@ -162,7 +161,7 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
+📁 Project Structure
 
 ```
 talkwise-platform/
@@ -187,50 +186,50 @@ talkwise-platform/
 └── docs/                   # Documentation
 ```
 
-## 🔌 API Endpoints
+API Endpoints
 
-### Authentication
+ Authentication
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
 - `GET /api/auth/profile` - Get user profile
 
-### Sessions
+ Sessions
 - `GET /api/sessions` - List user sessions
 - `POST /api/sessions` - Create new session
 - `GET /api/sessions/:id` - Get session details
 - `PUT /api/sessions/:id` - Update session
 - `DELETE /api/sessions/:id` - Delete session
 
-### Real-time Communication
+ Real-time Communication
 - `WebSocket /socket.io` - Real-time events
 - `POST /api/sessions/:id/join` - Join session
 - `POST /api/sessions/:id/leave` - Leave session
 
-### AI & Analytics
+ AI & Analytics
 - `POST /api/ai/generate-response` - Get AI participant response
 - `POST /api/speech/transcribe` - Convert speech to text
 - `POST /api/speech/synthesize` - Convert text to speech
 - `GET /api/analytics/:sessionId` - Get session analytics
 
-## 🧪 Testing
+🧪 Testing
 
-### Frontend Testing
+ Frontend Testing
 ```bash
 npm run test
 ```
 
-### Backend Testing
+ Backend Testing
 ```bash
 cd backend
 npm run test
 ```
 
-### End-to-End Testing
+ End-to-End Testing
 ```bash
 npm run test:e2e
 ```
 
-## 📱 WebRTC Configuration
+📱 WebRTC Configuration
 
 For production deployment, you'll need TURN servers for NAT traversal:
 
