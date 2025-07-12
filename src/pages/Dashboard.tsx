@@ -139,14 +139,14 @@ const Dashboard = () => {
               <Button 
                 variant="ghost" 
                 size="sm"
-                className="text-white hover:text-blue-300"
+                className="text-black hover:text-blue-300"
               >
                 <Settings className="w-4 h-4" />
               </Button>
               <Button 
                 variant="outline" 
                 size="sm"
-                className="border-white/20 text-white hover:bg-white/10"
+                className="border-white/20 text-black hover:bg-white/10"
                 onClick={handleLogout}
               >
                 Logout
@@ -243,7 +243,7 @@ const Dashboard = () => {
 
             <div className="grid gap-6">
               {sessions.map((session) => (
-                <Card key={session.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                <Card key={session.id} className="bg-white/5 backdrop-blur-sm border-black/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <div>
@@ -280,7 +280,7 @@ const Dashboard = () => {
                           <Button 
                             size="sm" 
                             variant="outline"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => navigate(`/session/${session.id}`)}
                           >
                             Join
@@ -290,7 +290,7 @@ const Dashboard = () => {
                           <Button 
                             size="sm" 
                             variant="outline"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => navigate(`/report/${session.id}`)}
                           >
                             View Report
