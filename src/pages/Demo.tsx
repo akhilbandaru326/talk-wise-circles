@@ -74,7 +74,7 @@ const Demo = () => {
             <Button 
               variant="ghost" 
               onClick={() => navigate('/')}
-              className="text-white hover:text-blue-300 mr-4"
+              className="text-white text-blue-300 mr-4"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
