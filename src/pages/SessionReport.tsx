@@ -105,7 +105,7 @@ const SessionReport = () => {
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/dashboard')}
-                className="text-white hover:text-blue-300"
+                className="text-black hover:text-blue-300"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Dashboard
@@ -117,11 +117,11 @@ const SessionReport = () => {
             </div>
             
             <div className="flex items-center space-x-2">
-              <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+              <Button variant="outline" size="sm" className="border-white/20 text-black hover:bg-white/10">
                 <Share2 className="w-4 h-4 mr-2" />
                 Share
               </Button>
-              <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+              <Button variant="outline" size="sm" className="border-white/20 text-black hover:bg-white/10">
                 <Download className="w-4 h-4 mr-2" />
                 Export PDF
               </Button>
