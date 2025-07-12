@@ -169,7 +169,7 @@ const Register = () => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-black py-3"
                 disabled={loading}
               >
                 {loading ? "Creating Account..." : "Create Account"}
