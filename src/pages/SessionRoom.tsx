@@ -274,7 +274,7 @@ const SessionRoom = () => {
                 variant={isVideoEnabled ? "default" : "outline"}
                 size="lg"
                 onClick={() => setIsVideoEnabled(!isVideoEnabled)}
-                className={`${isVideoEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'border-white/20 text-white hover:bg-white/10'} rounded-full p-4`}
+                className={`${isVideoEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'border-white/20 text-white hover:bg-blue/10'} rounded-full p-4`}
               >
                 {isVideoEnabled ? <Video className="w-5 h-5" /> : <VideoOff className="w-5 h-5" />}
               </Button>
@@ -283,7 +283,7 @@ const SessionRoom = () => {
                 <Button
                   size="lg"
                   onClick={startSession}
-                  className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6"
+                  className="bg-green-600 hover:bg-green-700 text-black rounded-full px-6"
                 >
                   Start Discussion
                 </Button>
@@ -349,15 +349,15 @@ const SessionRoom = () => {
               <CardContent className="p-4">
                 <h3 className="text-white font-semibold mb-3">Quick Actions</h3>
                 <div className="space-y-2">
-                  <Button variant="outline" size="sm" className="w-full border-white/20 text-white hover:bg-white/10">
+                  <Button variant="outline" size="sm" className="w-full border-white/20 text-black hover:bg-white/10">
                     <Volume2 className="w-4 h-4 mr-2" />
                     Audio Settings
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full border-white/20 text-white hover:bg-white/10">
+                  <Button variant="outline" size="sm" className="w-full border-white/20 text-black hover:bg-white/10">
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Chat
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full border-white/20 text-white hover:bg-white/10">
+                  <Button variant="outline" size="sm" className="w-full border-white/20 text-black hover:bg-white/10">
                     <Monitor className="w-4 h-4 mr-2" />
                     Share Screen
                   </Button>
