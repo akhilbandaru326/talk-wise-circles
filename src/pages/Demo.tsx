@@ -254,7 +254,7 @@ const Demo = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8"
+                className="bg-blue-600 hover:bg-blue-700 text-black px-8"
                 onClick={() => navigate('/register')}
               >
                 Start Free Trial
