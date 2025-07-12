@@ -90,7 +90,7 @@ const Demo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-blue-600/20 text-blue-300 border-blue-400/30">
+          <Badge className="mb-4 bg-blue-600/20 text-black hovor:text-blue-300 border-blue-400/30">
             🎬 Interactive Demo
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
