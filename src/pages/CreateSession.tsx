@@ -117,7 +117,7 @@ const CreateSession = () => {
             <Button 
               variant="ghost" 
               onClick={() => navigate('/dashboard')}
-              className="text-white hover:text-blue-300 mr-4"
+              className="text-black hover:text-blue-300 mr-4"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Dashboard
@@ -168,7 +168,7 @@ const CreateSession = () => {
                         </SelectTrigger>
                         <SelectContent className="bg-slate-800 border-white/20">
                           {topics.map((topic) => (
-                            <SelectItem key={topic} value={topic} className="text-white hover:bg-white/10">
+                            <SelectItem key={topic} value={topic} className="text-black hover:bg-white/10">
                               {topic}
                             </SelectItem>
                           ))}
@@ -246,7 +246,7 @@ const CreateSession = () => {
                             type="button"
                             variant="outline"
                             size="sm"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => adjustParticipants('real', 'subtract')}
                           >
                             <Minus className="w-4 h-4" />
@@ -258,7 +258,7 @@ const CreateSession = () => {
                             type="button"
                             variant="outline"
                             size="sm"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => adjustParticipants('real', 'add')}
                           >
                             <Plus className="w-4 h-4" />
@@ -281,7 +281,7 @@ const CreateSession = () => {
                             type="button"
                             variant="outline"
                             size="sm"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => adjustParticipants('ai', 'subtract')}
                           >
                             <Minus className="w-4 h-4" />
@@ -293,7 +293,7 @@ const CreateSession = () => {
                             type="button"
                             variant="outline"
                             size="sm"
-                            className="border-white/20 text-white hover:bg-white/10"
+                            className="border-white/20 text-black hover:bg-white/10"
                             onClick={() => adjustParticipants('ai', 'add')}
                           >
                             <Plus className="w-4 h-4" />
@@ -336,7 +336,7 @@ const CreateSession = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-black py-3"
                     disabled={loading}
                   >
                     {loading ? "Creating Session..." : "Create Session"}
