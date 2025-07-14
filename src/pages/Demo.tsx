@@ -262,7 +262,7 @@ const Demo = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/20 text-white hover:bg-white/10 px-8"
+                className="bg-blue-600 hover:bg-blue-700 text-black px-8"
                 onClick={() => navigate('/login')}
               >
                 Sign In
