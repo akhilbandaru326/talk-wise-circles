@@ -242,7 +242,7 @@ const Demo = () => {
         </div>
 
         {/* CTA Section */}
-        <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-white/10">
+        <Card className="bg-blue-600/20 from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-white/10">
           <CardContent className="p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Communication Skills?
