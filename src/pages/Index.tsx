@@ -122,7 +122,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+              className="border-white/20 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
               onClick={() => navigate(isLoggedIn ? '/dashboard' : '/register')}
             >
               {isLoggedIn ? 'Go to Dashboard' : 'Start Free Trial'}
@@ -130,7 +130,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg"
+              className="border-white/20 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
               onClick={() => navigate('/demo')}
             >
               Watch Demo
