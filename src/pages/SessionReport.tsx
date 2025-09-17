@@ -341,10 +341,10 @@ const SessionReport = () => {
         </Tabs>
 
         {/* Next Steps bg-gradient-to-r from-blue-600/20 to-purple-600/20 */}
-        <Card className="backdrop-blur-sm border-white/10 mt-8">
+        <Card className="bg-blue backdrop-blur-sm border-white/10 mt-8">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
-              <div classname="bg-white/10 backdrop-blur-md border-b border-white/10">
+              <div>
                 <h3 className="text-xl font-semibold text-black mb-2">Ready for your next session?</h3>
                 <p className="text-black ">
                   Continue improving your communication skills with more AI-powered discussions.
