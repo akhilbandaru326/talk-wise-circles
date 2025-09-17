@@ -340,8 +340,8 @@ const SessionReport = () => {
           </TabsContent>
         </Tabs>
 
-        {/* Next Steps */}
-        <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-white/10 mt-8">
+        {/* Next Steps bg-gradient-to-r from-blue-600/20 to-purple-600/20 */}
+        <Card className="backdrop-blur-sm border-white/10 mt-8">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
