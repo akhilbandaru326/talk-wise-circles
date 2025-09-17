@@ -265,7 +265,7 @@ const SessionRoom = () => {
                 variant={isAudioEnabled ? "default" : "outline"}
                 size="lg"
                 onClick={toggleAudio}
-                className={`${isAudioEnabled ? 'bg-green-600 hover:bg-green-700' : 'border-white/20 text-white hover:bg-white/10'} rounded-full p-4`}
+                className={`${isAudioEnabled ? 'bg-green-600 hover:bg-green-700' : 'border-white/20 text-black hover:bg-white/10'} rounded-full p-4`}
               >
                 {isAudioEnabled && !isMuted ? <Mic className="w-5 h-5" /> : <MicOff className="w-5 h-5" />}
               </Button>
@@ -274,7 +274,7 @@ const SessionRoom = () => {
                 variant={isVideoEnabled ? "default" : "outline"}
                 size="lg"
                 onClick={() => setIsVideoEnabled(!isVideoEnabled)}
-                className={`${isVideoEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'border-white/20 text-white hover:bg-blue/10'} rounded-full p-4`}
+                className={`${isVideoEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'border-white/20 text-black hover:bg-blue/10'} rounded-full p-4`}
               >
                 {isVideoEnabled ? <Video className="w-5 h-5" /> : <VideoOff className="w-5 h-5" />}
               </Button>
