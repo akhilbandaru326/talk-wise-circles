@@ -345,8 +345,8 @@ const SessionReport = () => {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Ready for your next session?</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-semibold text-black mb-2">Ready for your next session?</h3>
+                <p className="text-black ">
                   Continue improving your communication skills with more AI-powered discussions.
                 </p>
               </div>
